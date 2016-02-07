@@ -1,6 +1,7 @@
 package org.uqbar.login.ui
 
 import java.awt.Color
+
 import org.uqbar.arena.layout.VerticalLayout
 import org.uqbar.arena.widgets.Label
 import org.uqbar.arena.widgets.Panel
@@ -9,13 +10,14 @@ import org.uqbar.arena.widgets.TextBox
 import org.uqbar.arena.windows.ErrorsPanel
 import org.uqbar.arena.windows.MainWindow
 import org.uqbar.login.domain.Login
+import static extension org.uqbar.arena.xtend.ArenaXtendExtensions.*
 
 /**
  * Ejemplo de conversor millas -> kilometros en xtend
  */
 class LoginWindow extends MainWindow<Login> {
 	new() {
-		super(new Login('arena'))
+		super(new Login("arena"))
 	}
 
 	override createContents(Panel mainPanel) {
@@ -26,15 +28,16 @@ class LoginWindow extends MainWindow<Login> {
 
 		new Label(mainPanel).text = "Usuario"
 
-		new TextBox(mainPanel).bindValueToProperty("usuario")
+		new TextBox(mainPanel).value <=> "usuario"
 
 		new Label(mainPanel).text = "Password (es arena, guiño guiño)"
 
-		new PasswordField(mainPanel).bindValueToProperty("password")
+		new PasswordField(mainPanel).value <=> "password"
 
-		new Label(mainPanel)
-			.setBackground(Color.ORANGE)
-			.bindValueToProperty("passwordOk")
+		new Label(mainPanel) => [
+			background = Color.ORANGE
+			value <=> "passwordOk"	
+		]
 
 	}
 
