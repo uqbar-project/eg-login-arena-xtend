@@ -17,6 +17,7 @@ class Login {
 	}
 	
 	def void setPassword(String unaPassword) {
+		password = unaPassword
 		passwordOk = unaPassword == passwordValida
 	}
 	
