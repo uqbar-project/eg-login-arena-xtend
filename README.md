@@ -3,6 +3,8 @@
 En este ejemplo se muestra el uso de un *PasswordField* en una ventana de login.
 El *PasswordField* oculta los caracteres ingresados por pantalla.
 
+![image](https://cloud.githubusercontent.com/assets/4549002/17298776/c3264b90-57e1-11e6-96af-cdaeb26bb8bf.png)
+
 ## El modelo
 
 Es un objeto Login con las siguientes propiedades
