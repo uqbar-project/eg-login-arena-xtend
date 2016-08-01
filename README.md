@@ -1,6 +1,7 @@
 # Login
 
-En este ejemplo se muestra el uso de un PasswordField en una ventana de login. 
+En este ejemplo se muestra el uso de un *PasswordField* en una ventana de login.
+El *PasswordField* oculta los caracteres ingresados por pantalla.
 
 ## El modelo
 
