@@ -17,6 +17,6 @@ class Login {
 	
 	@Dependencies("password")	
 	def getPasswordOk() {
-		password == passwordValida
+		password?.equals(passwordValida)
 	}	
 }
