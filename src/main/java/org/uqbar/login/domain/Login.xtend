@@ -15,10 +15,6 @@ class Login {
 		passwordValida = unaPassword	
 	}
 	
-	def void setPassword(String unaPassword) {
-		password = unaPassword
-	}
-
 	@Dependencies("password")	
 	def getPasswordOk() {
 		password == passwordValida
