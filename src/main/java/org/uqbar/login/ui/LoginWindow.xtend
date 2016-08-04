@@ -11,9 +11,10 @@ import org.uqbar.arena.windows.ErrorsPanel
 import org.uqbar.arena.windows.MainWindow
 import org.uqbar.login.domain.Login
 import static extension org.uqbar.arena.xtend.ArenaXtendExtensions.*
+import org.uqbar.arena.bindings.ValueTransformer
 
 /**
- * Ejemplo de conversor millas -> kilometros en xtend
+ * Ejemplo de Login
  */
 class LoginWindow extends MainWindow<Login> {
 	new() {
@@ -35,7 +36,7 @@ class LoginWindow extends MainWindow<Login> {
 		new PasswordField(mainPanel).value <=> "password"
 
 		new Label(mainPanel) => [
-			background = Color.ORANGE
+			(background <=> "passwordOk").transformer = new PasswordOkTransformer 
 			value <=> "passwordOk"	
 		]
 
@@ -45,4 +46,24 @@ class LoginWindow extends MainWindow<Login> {
 		new LoginWindow().startApplication
 	}
 
+}
+
+class PasswordOkTransformer implements ValueTransformer<Boolean, Object> {
+	
+	override getModelType() {
+		typeof(Boolean)
+	}
+	
+	override getViewType() {
+		typeof(Object)
+	}
+	
+	override modelToView(Boolean valueFromModel) {
+		if (valueFromModel) Color.GREEN else Color.ORANGE
+	}
+	
+	override viewToModel(Object valueFromView) {
+		null	
+	}
+	
 }

@@ -5,6 +5,13 @@ El *PasswordField* oculta los caracteres ingresados por pantalla.
 
 ![image](https://cloud.githubusercontent.com/assets/4549002/17298776/c3264b90-57e1-11e6-96af-cdaeb26bb8bf.png)
 
+Si la password está ok debe mostrar el label en verde, en caso contrario se muestra en naranja. Aquí se ve que el que sabe si la password es correcta es el modelo, pero el que debe asociar 
+
+* password correcta => verde
+* password incorrecta => naranja
+
+es un controller de Arena, que maneja colores.
+
 ## El modelo
 
 Es un objeto Login con las siguientes propiedades
