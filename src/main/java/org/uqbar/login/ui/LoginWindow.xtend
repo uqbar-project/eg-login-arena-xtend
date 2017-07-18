@@ -48,21 +48,21 @@ class LoginWindow extends MainWindow<Login> {
 
 }
 
-class PasswordOkTransformer implements ValueTransformer<Boolean, Object> {
+class PasswordOkTransformer implements ValueTransformer<Boolean, Color> {
 	
 	override getModelType() {
 		typeof(Boolean)
 	}
 	
 	override getViewType() {
-		typeof(Object)
+		typeof(Color)
 	}
 	
 	override modelToView(Boolean valueFromModel) {
 		if (valueFromModel) Color.GREEN else Color.ORANGE
 	}
 	
-	override viewToModel(Object valueFromView) {
+	override viewToModel(Color valueFromView) {
 		null	
 	}
 	
