@@ -1,5 +1,7 @@
 # Login
 
+[![Build Status](https://travis-ci.org/uqbar-project/eg-login-arena-xtend.svg?branch=master)](https://travis-ci.org/uqbar-project/eg-login-arena-xtend)
+
 En este ejemplo se muestra el uso de un *PasswordField* en una ventana de login.
 El *PasswordField* oculta los caracteres ingresados por pantalla.
 
