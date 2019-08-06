@@ -26,20 +26,14 @@ class LoginWindow extends MainWindow<Login> {
 		mainPanel.layout = new VerticalLayout
 		
 		new ErrorsPanel(mainPanel, "Ingrese usuario y contraseña")	
-
 		new Label(mainPanel).text = "Usuario"
-
 		new TextBox(mainPanel).value <=> "usuario"
-
 		new Label(mainPanel).text = "Password (es arena, guiño guiño)"
-
 		new PasswordField(mainPanel).value <=> "password"
-
 		new Label(mainPanel) => [
 			(background <=> "passwordOk").transformer = new PasswordOkTransformer 
 			value <=> "passwordOk"	
 		]
-
 	}
 
 	def static main(String[] args) {
@@ -50,20 +44,14 @@ class LoginWindow extends MainWindow<Login> {
 
 class PasswordOkTransformer implements ValueTransformer<Boolean, Color> {
 	
-	override getModelType() {
-		typeof(Boolean)
-	}
+	override getModelType() { Boolean }
 	
-	override getViewType() {
-		typeof(Color)
-	}
+	override getViewType() { Color }
 	
 	override modelToView(Boolean valueFromModel) {
 		if (valueFromModel) Color.GREEN else Color.ORANGE
 	}
 	
-	override viewToModel(Color valueFromView) {
-		null	
-	}
+	override viewToModel(Color valueFromView) { null }
 	
 }
